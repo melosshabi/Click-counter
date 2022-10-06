@@ -17,7 +17,8 @@ container.addEventListener('click', () =>{
 resetBtn.addEventListener('click', ()=>{
     timesClicked.innerText = 0;
     clickCount = 0;
-
+    lowerBtn.className = "disabled-btn";
+    lowerBtn.disabled = true;
 });
 
 lowerBtn.addEventListener('click', ()=>{
