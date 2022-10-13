@@ -11,14 +11,23 @@ container.addEventListener('click', () =>{
     {
         lowerBtn.className = 'lower-btn';
         lowerBtn.disabled = false;
+        resetBtn.disabled = false;
+        resetBtn.className = "reset-btn";
     }
 });
 
 resetBtn.addEventListener('click', ()=>{
-    timesClicked.innerText = 0;
-    clickCount = 0;
-    lowerBtn.className = "disabled-btn";
-    lowerBtn.disabled = true;
+  
+    if(timesClicked.innerText > 0)
+    {
+      timesClicked.innerText = 0;
+      clickCount = 0;
+      lowerBtn.disabled = true;
+      lowerBtn.className = 'disabled-btn';
+      resetBtn.disabled = true;
+      resetBtn.className = 'disabled-btn';
+      
+    }
 });
 
 lowerBtn.addEventListener('click', ()=>{
@@ -30,5 +39,6 @@ lowerBtn.addEventListener('click', ()=>{
  if(clickCount == 0){
     lowerBtn.className = 'disabled-btn';
     lowerBtn.disabled = true;
+    resetBtn.disabled = true;
  } 
 });

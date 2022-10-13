@@ -4,7 +4,8 @@ html {
 }
 body{
     overflow: hidden;
-    background-color: gray;
+    background: linear-gradient(90deg, rgba(150, 40, 150), rgba(40, 150, 150));
+    color:white;
 }
 #container{
     width:100%;
@@ -36,7 +37,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-#reset-btn{
+.reset-btn{
    /*position: absolute;
    left:54%;
    top:95%;
@@ -45,17 +46,17 @@ body{
    padding:5px 40px 5px 40px;
    border:none;
    border-radius: 5px;
-   background-color: rgb(93, 218, 21);
+   background: linear-gradient(90deg, rgba(150, 40, 150), rgba(40, 150, 150));
    color:white;
-   box-shadow: 3px 3px 3px black;
+   box-shadow: 2px 2px 5px rgba(219, 11, 219, .8);
    user-select: none;
    cursor: pointer;
    transition:transform 50ms, background-color 200ms;
 }
-#reset-btn:hover{
-    background-color: rgb(55, 129, 12);
+.reset-btn:hover{
+    background: linear-gradient(90deg, rgba(150, 40, 150, .7), rgba(40, 150, 150, .7));
 }
-#reset-btn:active{
+.reset-btn:active{
     transform: translate(3px, 3px);
 }
 .lower-btn{
@@ -64,15 +65,15 @@ body{
     border:none;
     border-radius: 5px;
     margin-left:0.5em;
-    background-color: rgb(93, 218, 21);
+    background: linear-gradient(90deg, rgba(150, 40, 150), rgba(40, 150, 150));
     color:white;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 2px 2px 5px rgba(219, 11, 219, .8);
     user-select: none;
     cursor: pointer;
     transition:transform 50ms, background-color 200ms;
 }
 .lower-btn:hover{
-    background-color: rgb(55, 129, 12);
+    background: linear-gradient(90deg, rgba(150, 40, 150, .7), rgba(40, 150, 150, .7));
 }
 .lower-btn:active{
     transform: translate(3px, 3px);
@@ -82,11 +83,45 @@ body{
     padding:5px 40px 5px 40px;
     border:none;
     border-radius: 5px;
-    margin-left:0.5em;
     background-color:rgb(32, 32, 32);
     color:white;
     box-shadow: 3px 3px 3px black;
     user-select: none;
     cursor: not-allowed;
     transition:transform 50ms, background-color 200ms;
+}
+.disabled-btn:last-child{
+    margin-left:0.5em;
+}
+
+@media (max-width:768px)
+{
+    html{
+        overflow: hidden;
+    }
+    body{
+        overflow: hidden;
+        font-size: 13px;
+    }
+    #container{
+        font-size:3em;
+        max-width: 100%;
+    }
+    .reset-btn{
+        transform:translateX(-60%);
+    }
+    .lower-btn{
+        margin:0;
+        transform: translateX(-90%);
+    }
+    .disabled-btn:first-child{
+        transform: translateX(-60%);
+    }
+    .disabled-btn{
+        transform: translateX(-90%);
+    }
+    .disabled-btn:last-child{
+        margin:0;
+    }
+    
 }
